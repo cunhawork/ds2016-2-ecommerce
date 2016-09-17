@@ -54,4 +54,11 @@ public class CategoriaDao implements ICategoriaDao {
 		Query query = entityManager.createQuery("from Categoria");
 		return query.getResultList();
 	}
+
+
+	public Categoria buscarPorId(Integer id) {
+		Query query = entityManager.createQuery("from Categoria where codigo = :codigo");
+		query.setParameter("codigo", id);
+		return (Categoria) query.getSingleResult();
+	}
 }

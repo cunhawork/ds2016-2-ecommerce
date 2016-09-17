@@ -16,4 +16,6 @@ public interface ICategoriaDao {
 
 	void salvar(Categoria categoria);
 
+	Categoria buscarPorId(Integer id);
+
 }
